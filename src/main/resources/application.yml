@@ -1,0 +1,19 @@
+
+# HTTP Server
+server:
+  port: 8888
+
+spring:
+  main.banner-mode: off
+  application:
+    name: library-config-server
+  # Spring Cloud Config Server Repository
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/felipemonzon/library-spring-config-server
+
+  # Spring properties in case you use different profiles
+  profiles:
+    active: dev
